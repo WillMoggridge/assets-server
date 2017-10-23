@@ -70,7 +70,7 @@ REDIRECT_MANAGER = RedirectManager(data_collection=MONGO_DB['redirects'])
 DATA_MANAGER = DataManager(data_collection=MONGO_DB['asset_data'])
 
 SWIFT_CONNECTION = swiftclient.client.Connection(
-    'http://swift:8080/auth/v1.0',
+    'http://localhost:8089/auth/v1.0',
     'test:tester',
     'testing',
     auth_version='1.0'

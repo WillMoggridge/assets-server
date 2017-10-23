@@ -1,7 +1,7 @@
-try:
-    from urllib.parse import quote_plus, unquote_plus
-except ImportError:
-    from urllib import quote_plus, unquote_plus
+from future import standard_library
+standard_library.install_aliases()  # noqa
+
+from urllib.parse import quote_plus, unquote_plus
 
 
 def normalize(url_to_normalize):

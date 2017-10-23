@@ -1,3 +1,4 @@
+from builtins import object
 import re
 import uuid
 from copy import copy
@@ -8,7 +9,7 @@ from swiftclient.exceptions import ClientException as SwiftException
 from .lib.url_helpers import normalize
 
 
-class FileManager:
+class FileManager(object):
     """
     Manage asset files:
     - creation
@@ -105,7 +106,7 @@ class FileManager:
         return path
 
 
-class DataManager:
+class DataManager(object):
     """
     Generate data objects for assets
     """
@@ -207,7 +208,7 @@ class DataManager:
             return self.data_collection.remove({'file_path': file_path})
 
 
-class TokenManager:
+class TokenManager(object):
     """
     A class for maintaining authentication tokens
     in a MongoDB database
@@ -272,7 +273,7 @@ class TokenManager:
             }
 
 
-class RedirectManager:
+class RedirectManager(object):
     """
     Manage 301 redirects stored in a MongoDB database
     """

@@ -1,4 +1,6 @@
 # System
+from builtins import str
+from builtins import object
 from io import BytesIO
 import os
 
@@ -16,7 +18,7 @@ import magic
 from .python_helpers import shared_items
 
 
-class ImageProcessor:
+class ImageProcessor(object):
     operation_parameters = {
         'region': ['rect'],
         'rotate': ['deg'],
